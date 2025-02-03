@@ -12,7 +12,7 @@ This project displays a collection of colors dynamically fetched from a JSON fil
 
 ## 🚀 How to Use
 Visit the live demo here:  
-🔗 **[Tinker Colors Chart](https://amartadey.github.io/tkinter-colors/)**  
+🔗 **[Tkinter Colors Chart](https://amartadey.github.io/tkinter-colors/)**  
    
 ## 📝 License
 This project is open-source and available under the MIT License.
