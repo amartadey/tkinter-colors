@@ -1,1 +1,1 @@
-# tkinter-colors
+# tkinter colors
