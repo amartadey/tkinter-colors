@@ -73,13 +73,20 @@
                 const response = await fetch('https://amartadey.github.io/tkinter-colors/assets/colors.json'); // Import JSON file
                 let colors = await response.json();
 
-                // Convert hex to HSL and sort by a combination of hue and saturation
-                colors = colors.map(color => ({
-                    ...color,
-                    hue: hexToHSL(color.hexvalue).h,
-                    saturation: hexToHSL(color.hexvalue).s
-                })).sort((a, b) => {
+                // Convert hex to HSL and sort by a combination of hue, saturation, and lightness
+                colors = colors.map(color => {
+                    const { h, s, l } = hexToHSL(color.hexvalue);
+                    return {
+                        ...color,
+                        hue: h,
+                        saturation: s,
+                        lightness: l
+                    };
+                }).sort((a, b) => {
                     if (a.hue === b.hue) {
+                        if (a.saturation === b.saturation) {
+                            return a.lightness - b.lightness;
+                        }
                         return a.saturation - b.saturation;
                     }
                     return a.hue - b.hue;
