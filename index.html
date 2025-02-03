@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tkinter Color Names</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .color-box {
+            width: 120px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            font-size: 12px;
+            text-align: center;
+        }
+        .highlight {
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tinker Colors Chart <small style="display: block; font-size: 0.5em;">(Click Each Box To Copy Names)</small></h1>
+    <script>
+        async function fetchColors() {
+            try {
+                const response = await fetch('colors.json'); // Import JSON file
+                const colors = await response.json();
+                
+                const container = document.body;
+                colors.forEach(color => {
+                    const box = document.createElement('div');
+                    box.classList.add('color-box');
+                    box.style.backgroundColor = color.hexvalue;
+                    box.innerHTML = `<span class="highlight" style="color: ${getContrastYIQ(color.hexvalue)};">${color.colorname}</span>`;
+                    
+                    box.addEventListener('click', () => {
+                        navigator.clipboard.writeText(color.colorname).then(() => {
+                            alert(`${color.colorname} copied to clipboard!`);
+                        });
+                    });
+                    
+                    container.appendChild(box);
+                });
+            } catch (error) {
+                console.error('Error fetching color data:', error);
+            }
+        }
+        
+        function getContrastYIQ(hexcolor) {
+            hexcolor = hexcolor.replace("#", "");
+            const r = parseInt(hexcolor.substring(0,2), 16);
+            const g = parseInt(hexcolor.substring(2,4), 16);
+            const b = parseInt(hexcolor.substring(4,6), 16);
+            const yiq = (r*299 + g*587 + b*114) / 1000;
+            return yiq >= 128 ? 'black' : 'white';
+        }
+        
+        fetchColors();
+    </script>
+</body>
+</html>
