@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tkinter Color Names</title>
+    
+    <title>Tkinter Color Names Chart - Copy Tkinter Color Codes Easily</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Tkinter Color" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    
+    <meta name="description" content="Explore a comprehensive list of Tkinter color names with their corresponding hex codes. Click each color to copy its name for easy use in Python Tkinter projects.">
+    <meta name="keywords" content="Tkinter colors, Tkinter color names, Python Tkinter colors, Tkinter color chart, Tkinter color codes">
+    <meta name="author" content="Amarta Dey">
+    
+    <meta property="og:title" content="Tkinter Color Names Chart - Copy Tkinter Color Codes Easily">
+    <meta property="og:description" content="Find Tkinter color names and their hex codes in an interactive color chart. Click to copy color names instantly for your Python Tkinter GUI projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amartadey.github.io/tkinter-colors/">
+    <meta property="og:image" content="https://amartadey.github.io/tkinter-colors/assets/Tkinter-Color-Charts.jpg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tkinter Color Names Chart - Copy Tkinter Color Codes Easily">
+    <meta name="twitter:description" content="Browse a Tkinter color names chart with hex values. Click to copy names for your Python Tkinter projects.">
+    <meta name="twitter:image" content="https://amartadey.github.io/tkinter-colors/assets/Tkinter-Color-Charts.jpg">
+    
+    <link rel="canonical" href="https://amartadey.github.io/tkinter-colors/">
+
     <style>
         body {
             display: flex;
@@ -39,11 +65,12 @@
     </style>
 </head>
 <body>
-    <h1>Tinker Colors Chart <small style="display: block; font-size: 0.5em;">(Click Each Box To Copy Names)</small></h1>
+    <h1>Tkinter Colors Chart <small style="display: block; font-size: 0.5em;">(Click Each Box To Copy Names)</small></h1>
+    
     <script>
         async function fetchColors() {
             try {
-                const response = await fetch('colors.json'); // Import JSON file
+                const response = await fetch('assets/colors.json'); // Import JSON file
                 const colors = await response.json();
                 
                 const container = document.body;
