@@ -1,4 +1,4 @@
-# 🎨 Tinker Colors Chart
+# 🎨 Tkinter Colors Chart
 
 This project displays a collection of colors dynamically fetched from a JSON file and rendered in an interactive grid. Clicking on a color name copies it to the clipboard.
 
