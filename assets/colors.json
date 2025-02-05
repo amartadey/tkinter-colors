@@ -235,16 +235,6 @@
     "rgb": "RGB(83,134,139)"
   },
   {
-    "colorname": "cadmiumorange",
-    "hexvalue": "#FF6103",
-    "rgb": "RGB(255,97,3)"
-  },
-  {
-    "colorname": "cadmiumyellow",
-    "hexvalue": "#FF9912",
-    "rgb": "RGB(255,153,18)"
-  },
-  {
     "colorname": "chartreuse",
     "hexvalue": "#DFFF00",
     "rgb": "RGB(223,255,0)"
