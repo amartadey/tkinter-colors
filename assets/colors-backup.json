@@ -245,6 +245,11 @@
     "rgb": "RGB(255,153,18)"
   },
   {
+    "colorname": "carrot",
+    "hexvalue": "#ED9121",
+    "rgb": "RGB(237,145,33)"
+  },
+  {
     "colorname": "chartreuse",
     "hexvalue": "#DFFF00",
     "rgb": "RGB(223,255,0)"
