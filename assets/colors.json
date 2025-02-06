@@ -2330,36 +2330,6 @@
     "rgb": "RGB(40,40,40)"
   },
   {
-    "colorname": "sgigray32",
-    "hexvalue": "#515151",
-    "rgb": "RGB(81,81,81)"
-  },
-  {
-    "colorname": "sgigray36",
-    "hexvalue": "#5B5B5B",
-    "rgb": "RGB(91,91,91)"
-  },
-  {
-    "colorname": "sgigray52",
-    "hexvalue": "#848484",
-    "rgb": "RGB(132,132,132)"
-  },
-  {
-    "colorname": "sgigray56",
-    "hexvalue": "#8E8E8E",
-    "rgb": "RGB(142,142,142)"
-  },
-  {
-    "colorname": "sgigray72",
-    "hexvalue": "#B7B7B7",
-    "rgb": "RGB(183,183,183)"
-  },
-  {
-    "colorname": "sgigray76",
-    "hexvalue": "#C1C1C1",
-    "rgb": "RGB(193,193,193)"
-  },
-  {
     "colorname": "sgigray92",
     "hexvalue": "#EAEAEA",
     "rgb": "RGB(234,234,234)"
